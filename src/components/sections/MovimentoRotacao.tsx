@@ -195,7 +195,7 @@ const MovimentoRotacao: React.FC<MovimentoRotacaoProps> = ({ onBack }) => {
 
         <FormulaCard
           title="Torque"
-          formula="$$\\tau = I\\alpha $$"
+          formula="$$\\tau = I\\α $$"
           description="O torque é o produto do momento de inércia pela aceleração angular. É a 'segunda lei de Newton' para rotação."
           variables={[
             { symbol: "τ", meaning: "Torque (N⋅m)" },
@@ -218,7 +218,7 @@ const MovimentoRotacao: React.FC<MovimentoRotacaoProps> = ({ onBack }) => {
 
           <FormulaCard
             title="Relação Velocidades"
-            formula="$$v = \\omega r$$"
+            formula="$$v = \\ω r$$"
             description="A velocidade linear de um ponto na periferia de um objeto rotativo."
             variables={[
               { symbol: "v", meaning: "Velocidade linear (m/s)" },
