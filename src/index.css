@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Netflix-inspired custom styles */
+@layer base {
+  body {
+    font-family: 'Roboto', 'Open Sans', sans-serif;
+    background-color: #141414;
+    color: #ffffff;
+  }
+}
+
+@layer components {
+  .netflix-red {
+    @apply bg-red-600;
+    background-color: #E50914;
+  }
+  
+  .netflix-red-hover {
+    @apply hover:bg-red-700;
+    background-color: #E50914;
+  }
+  
+  .netflix-red-hover:hover {
+    background-color: #f40612;
+  }
+  
+  .netflix-dark {
+    background-color: #141414;
+  }
+  
+  .netflix-gray {
+    background-color: #2f2f2f;
+  }
+  
+  .netflix-text {
+    color: #ffffff;
+  }
+  
+  .netflix-text-secondary {
+    color: #cccccc;
+  }
+  
+  .netflix-text-muted {
+    color: #999999;
+  }
+}

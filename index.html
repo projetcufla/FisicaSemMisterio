@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Física sem Mistério - Plataforma Educacional</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- KaTeX CSS for mathematical formulas - Optimized version -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+    
+    <!-- KaTeX JavaScript - Optimized version -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
+    
+    <!-- KaTeX auto-render extension - Optimized version -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+    
+    <style>
+      body {
+        font-family: 'Roboto', 'Open Sans', sans-serif;
+        background-color: #141414;
+        color: #f9fafb;
+      }
+      
+      /* Optimized KaTeX styles */
+      .katex {
+        font-size: 1.05em !important;
+        color: #ffffff !important;
+      }
+      
+      .katex-display {
+        margin: 0.8em 0 !important;
+        text-align: center !important;
+        background: rgba(20, 20, 20, 0.8);
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border: 1px solid rgba(229, 9, 20, 0.3);
+      }
+      
+      /* Smooth scrolling */
+      html {
+        scroll-behavior: smooth;
+      }
+      
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      
+      ::-webkit-scrollbar-track {
+        background: #141414;
+      }
+      
+      ::-webkit-scrollbar-thumb {
+        background: #E50914;
+        border-radius: 4px;
+      }
+      
+      ::-webkit-scrollbar-thumb:hover {
+        background: #f40612;
+      }
+      
+      /* Netflix-style scrollbar hide */
+      .scrollbar-hide {
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+      }
+      
+      .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+      }
+      
+      /* Netflix-style button hover effects */
+      .netflix-button {
+        transition: all 0.3s ease;
+        transform: scale(1);
+      }
+      
+      .netflix-button:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 25px rgba(229, 9, 20, 0.4);
+      }
+      
+      /* Netflix card hover effects */
+      .netflix-card {
+        transition: all 0.3s ease;
+        transform: scale(1);
+      }
+      
+      .netflix-card:hover {
+        transform: scale(1.08);
+        z-index: 10;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Auto-render KaTeX when content changes
+        const observer = new MutationObserver(function(mutations) {
+          mutations.forEach(function(mutation) {
+            if (mutation.type === 'childList' || mutation.type === 'subtree') {
+              renderMathInElement(document.body, {
+                delimiters: [
+                  {left: '$$', right: '$$', display: true},
+                  {left: '$', right: '$', display: false},
+                  {left: '\\(', right: '\\)', display: false},
+                  {left: '\\[', right: '\\]', display: true}
+                ]
+              });
+            }
+          });
+        });
+        
+        observer.observe(document.body, {
+          childList: true,
+          subtree: true
+        });
+      });
+    </script>
+  </body>
+</html>
